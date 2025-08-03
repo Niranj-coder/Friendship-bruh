@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Friendship Day Bruh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(to right, #1e1e2f, #121212);
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      overflow-x: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 0.15em solid #fff;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    #popup {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ff4081;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #ff4081;
+      font-family: 'Pacifico', cursive;
+      animation: fadeSlide 1s ease-in-out forwards;
+    }
+    @keyframes fadeSlide {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    button {
+      margin-top: 50px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background: #00e5ff;
+      color: #000;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background: #1de9b6;
+      transform: scale(1.05);
+    }
+    .bruh-text {
+      margin-top: 30px;
+      font-size: 2rem;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 4.5s;
+      color: #ffc107;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .fireworks {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      background: url('https://media.giphy.com/media/3oz8xLd9DJq2l2VFtu/giphy.gif') center/cover no-repeat;
+      opacity: 0.08;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div id="popup">From your fav crackhead, Nandu 😌</div>
+  <h1>Happy Friendship Day, idiot 😌❤️</h1>
+  <div class="bruh-text">...bruh.</div>
+  <button onclick="sayBruh()">Click Me, bruh 💥</button>
+  <div class="fireworks"></div>
+
+  <script>
+    function sayBruh() {
+      alert("BRUH moment unlocked 😂🔥");
+      const audio = new Audio("https://www.myinstants.com/media/sounds/bruh.mp3");
+      audio.play();
+    }
+    setTimeout(() => {
+      document.getElementById('popup').style.display = 'none';
+    }, 6000);
+  </script>
+</body>
+</html>
